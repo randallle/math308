@@ -1,0 +1,63 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\setlength{\parindent}{0pt}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage[none]{hyphenat}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amstext}
+\usepackage{amsthm}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{MATH 308}
+\rhead{Week 5: Wednesday, February 9, 2022}
+
+\begin{document}
+\textbf{Dependent (paired) 2-sample test for difference} \\
+The test is used when the 2 samples are dependent. That is, when the values in the two samples are pairwise matched (i.e. clinical trials)
+$$\text{Sample}_A=(X_{A1}, X_{A2}, X_{A3}, ..., X_{An})$$
+$$\text{Sample}_B=(X_{B1}, X_{B2}, X_{B3}, ..., X_{Bn})$$
+
+
+
+$$ t=\frac{\overline{x_D}-\mu_0}{\frac{S_D}{\sqrt{n}}} \text{ where } x_D = (x_{A1}-x_{B1}, x_{A2}-x_{B2}, ..., x_{An}-x_{Bn})$$ \\
+
+\textbf{Example:} A group of 20 sports science students are randomly selected to investigate whether a 12-week plyometric-training program improves their standing long-jump performance.\\\\The following are the test results:
+
+$$\overline{x}_D = \frac{1}{n}\sum_{k=1}^{n} (x_{Ak}-x_{Bk}) = 0.034$$
+$$\overline{s}_D = \sqrt{\frac{1}{n-1}\sum_{k=1}^{n} (x_{Dk}-\overline{x}_D)^2} = 0.03185$$
+
+Is the difference statistically significant?\\\\
+\textbf{Solution:}\\
+Let's use a paired 2-sample t-test. We're assuming the data were not too skewed ($n\leq20$)\\\\
+Null hypothesis, $H_0$: the distribution for the mean of the sample difference is more or less $\mathcal{N}(0,1)$
+
+$$t=\frac{\overline{x}_D-0}{\frac{s_D}{\sqrt{n}}} = \frac{0.034-0}{\frac{0.03185}{\sqrt{20}}}\approx 4.77$$
+$$\text{df}=20-1=19$$\
+$$P_{H_0}(T\geq4.77)\approx0\%\Rightarrow\text{ Reject }H_0$$ 
+
+\pagebreak
+\textbf{Preview of Estimators}
+\begin{itemize}
+    \item $\mu$ is the mean in a population
+    \item $\hat{\mu}$ is a random variable whose values should estimate $\mu$
+    \item \textbf{Example of estimator:} $\hat{\mu}$ where \{all n-samples\} $\Rightarrow \mathbb{R}$ 
+    \item \textbf{Definition:} an estimator is unbiased if $E(\hat{\mu})=\mu$
+    \item Trivial example: 
+\end{itemize}
+
+
+
+
+
+
+
+% \hat{\delta}: {all "nice" n-samples}
+
+
+
+\end{document}
