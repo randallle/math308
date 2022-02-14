@@ -1,0 +1,88 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\setlength{\parindent}{0pt}
+\renewcommand{\arraystretch}{1.5}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage[none]{hyphenat}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amstext}
+\usepackage{amsthm}
+\usepackage{parskip}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{MATH 308}
+\rhead{Week 5: Monday, February 7, 2022}
+
+\begin{document}
+\textbf{Two Sample Mean Test (A/B Testing)}
+
+% \textbf{Definition:} An estimator is a rule, often expressed as a formula, that tells us how to calculate the value of an estimate for a parameter based on the value in a sample
+
+% \textbf{Example: }Sample mean is a (point) estimator, $\hat{\mu}$
+% $$\hat{\mu}: \{\text{n-sample}\} \rightarrow \mathbb{R}$$
+% $$(y_1, y_2, ..., y_n) \rightarrow \frac{y_1 + y_2 + ... +y_n}{n}$$
+
+% \textbf{Remark:} The estimator $\hat{\mu}$ can be seen as a random variable
+% $$\hat{\mu}=\overline{Y}=\frac{Y_1 + Y_2 + ... + Y_n}{n}$$
+
+% The hope is that $E(\hat{\mu})=\mu$ \bigskip
+
+% \textbf{Definition:} Let $\hat{\theta}$ be a \underline{point estimator} of a parameter $\theta$. $\hat{\theta}$ is said to be an unbiased estimator if $E(\hat{\theta})=\theta$. Otherwise, it is biased. \bigskip
+
+% \textbf{Definition:} 
+% \begin{enumerate}
+%     \item The \textbf{bias} of $\hat{\theta}$ is \framebox[1.1\width]{$B(\hat{\theta})=E(\hat{\theta})-\theta$}
+%     \item The \textbf{mean square error of $\hat{\theta}$} is \framebox[1.1\width]{$\text{MSE}(\hat{\theta})=E[(\hat{\theta}-\theta)^2]$}
+% \end{enumerate}
+% \bigskip
+% \textbf{Theorem:} $\text{MSE}(\hat{\theta}) = V(\hat{\theta}) + B(\hat{\theta})^2$ \bigskip
+
+% \textbf{Proof:}\
+% By definition $\text{MSE}(\hat{\theta})=E[(\hat{\theta}-\theta)^2]$. Therefore,
+% \begin{align*}
+%     \text{MSE}(\hat{\theta})&=E[\hat{\theta}^2-2\theta\hat{\theta}+\theta^2] \\
+%     &=E[\hat{\theta}^2]-2\theta E[\hat{\theta}] + \theta^2 \\
+%     &=E[\hat{\theta}^2]-2\theta E[\hat{\theta}] + \theta^2    
+% \end{align*}
+
+
+
+
+% % \hat{\theta}
+
+% \textbf{Common unbiased estimators}\\
+% We're assuming that the sampling method produces random, independent values in the sample
+
+% \begin{center}
+% \begin{tabular}{|c |c |c |c |c |}
+%     \hline
+%     Target parameter & Sample size & Estimator ($\hat{\theta}$) & $E(\hat{\theta})$ & Standard error ($\sigma_{\hat{\theta}}$) \\ 
+%     \hline
+%     $\theta$ & $n$ & $\hat{\mu}=\overline{x}$ & $\mu$ &$\frac{\sigma}{\sqrt{n}}$ \\  
+%     \hline
+%     $p$ & $n$ & $\hat{p}=\frac{\sum \text{successes}}{n} $ & $p$ & $\sqrt{\frac{pq}{n}}$ \\
+%     \hline
+%     $\mu_1-\mu_2$ & $n_1 \text{ and }n_2$ & $\widehat{\mu_1 -\mu_2}=\hat{\mu_1}-\hat{\mu_2}$ & $\hat{\mu_1}-\hat{\mu_2}$ & $\sqrt{\frac{\sigma_1^2}{n_1} + \frac{\sigma_2^2}{n_2}}$ \\
+%     \hline
+%     $p_1-p_2$ & $n_1 \text{ and }n_2$ & $\widehat{p_1-p_2}=\hat{p_1}-\hat{p_2}$ & $p_1-p_2$ & $\sqrt{\frac{p_1q_1}{n_1}+\frac{p_2q_2}{n_2}}$ \\
+%     \hline
+% \end{tabular}
+% \end{center}
+
+% Less trivial example of unbiased estimator
+% $$\hat{\sigma}^2 = \frac{1}{n-1}\sum_{i=1}^{n} (y_i-\overline{y})^2  $$ \\\\
+
+% \textbf{Proof:}
+% $$E(\sigma^2) = E(\frac{1}{n-1}\sum_{i=1}^{n} (y_i-\overline{y})^2)$$
+% $$=\frac{1}{n-1}\sum_ {i=1}^{n} E[(Y_i-\overline{Y})^2]$$
+
+% Here: the $Y_i$ are independent random variables with $E(Y_i)=\mu$ and $V(Y_i)=\sigma^2$. Therefore, $E(Y_iY_j)=E(Y_i)E(Y_j) = \mu\mu$ if $i \neq j$
+
+
+
+\end{document}
